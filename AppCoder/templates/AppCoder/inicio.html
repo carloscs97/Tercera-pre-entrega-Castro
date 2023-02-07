@@ -1,0 +1,49 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block subtitulo %}
+
+Bienvenidos!
+                    
+{% endblock %}
+
+{% block titulo %}
+
+Esta es mi primera página web
+                    
+{% endblock %}
+
+{% block descripcion %}
+
+PUEDES BUSCAR LA CAMADA DEL CURSO
+
+<form action="/AppCoder/resultados/" method="GET">
+    
+    <input type="number" name = "camada" id ="camada">
+    <input type = "submit" value = "Buscar">
+
+</form>
+
+<p>Estamos buscando la camada: {{camada}}</p>
+
+{% if not camada in camada %}
+
+{{resp1}}
+
+{% endif %}
+
+{% for curso in cursos %}
+
+<p>Nombre: {{curso.nombre}}---- Camada:{{curso.camada}}</p>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block titulo2 %}
+
+Esta pagina la he realizado utilizando Django
+
+{% endblock %}

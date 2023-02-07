@@ -1,0 +1,39 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block subtitulo %}
+
+Bienvenidos estudiantes!
+                    
+{% endblock %}
+
+
+{% block titulo %}
+
+Esta página mostrará los estudiantes
+                    
+{% endblock %}
+
+{% block descripcion %}
+
+Formulario - Agregar Estudiantes
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+
+        {{form2.as_table}}
+
+    </table>
+
+    <input type = "submit" value ="Enviar">
+</form>
+
+{% endblock %}
+
+{% block titulo2 %}
+
+Hay muchos estudiantes
+
+{% endblock %}

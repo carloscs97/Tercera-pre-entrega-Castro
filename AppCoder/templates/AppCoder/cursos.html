@@ -1,0 +1,40 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block subtitulo %}
+
+Bienvenidos a los cursos!
+                    
+{% endblock %}
+
+{% block titulo %}
+
+Esta página mostrará los cursos
+                    
+{% endblock %}
+
+{% block descripcion %}
+
+Formulario - Agregar Cursos
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+
+        {{form1.as_table}}
+
+    </table>
+
+    <input type = "submit" value ="Enviar">
+</form>
+
+{% endblock %}
+
+
+{% block titulo2 %}
+
+Hay muchos cursos.
+
+{% endblock %}

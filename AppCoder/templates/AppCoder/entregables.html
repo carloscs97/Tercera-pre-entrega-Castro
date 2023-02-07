@@ -1,0 +1,40 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block subtitulo %}
+
+Bienvenidos a los entregables!
+                    
+{% endblock %}
+
+{% block titulo %}
+
+Esta página mostrará los entregables
+                    
+{% endblock %}
+
+{% block descripcion %}
+
+Formulario - Agregar Entregables
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+
+        {{form4.as_table}}
+
+    </table>
+
+    <input type = "submit" value ="Enviar">
+</form>
+
+{% endblock %}
+
+
+{% block titulo2 %}
+
+Envía tu entregable.
+
+{% endblock %}
